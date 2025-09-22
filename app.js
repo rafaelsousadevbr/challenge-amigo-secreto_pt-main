@@ -15,7 +15,16 @@ function adicionarAmigo() {
 
     listaDeAmigos.push(nome);
     inputName.value = "";
+    exibirListaDeAmigos();
 }
 
+//Função para atualizar lista de amigos na tela
+function exibirListaDeAmigos() {
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
 
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        lista.innerHTML += `<li>* ${listaDeAmigos[i]}</li>`;
+    }
+}
 
