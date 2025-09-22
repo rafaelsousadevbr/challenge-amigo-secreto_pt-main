@@ -28,3 +28,16 @@ function exibirListaDeAmigos() {
     }
 }
 
+//Função para sortear os amigo(a)s
+function sortearAmigo(){
+    if (listaDeAmigos.length === 0) {
+        alert("Nenhum amigo(a) disponível para sortear.");
+        return;
+    }
+
+    const indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length);
+    const amigoSorteado = listaDeAmigos[indiceSorteado];
+
+    const resultadoDoSorteio = document.getElementById('resultado');
+    resultadoDoSorteio.innerHTML = `Amigo(a) sorteado(a): <strong>${amigoSorteado}</strong>`;
+}
